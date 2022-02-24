@@ -7,7 +7,7 @@ Planet mercury = new Planet(7, -250, 0);
 ArrayList<Planet> planets = new ArrayList<Planet>();
 
 void setup(){
-  size(1500,1500);
+  fullScreen();
   background(0);
   noStroke(); 
   
