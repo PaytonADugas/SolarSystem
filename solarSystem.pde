@@ -1,8 +1,8 @@
 
 
 Planet sun = new Planet(100,0,0);
-Planet earth = new Planet(10, 500,0);
-Planet moon = new Planet(3, 600, 0);
+Planet earth = new Planet(10, 400,0);
+Planet moon = new Planet(3, 500, 0);
 Planet mercury = new Planet(7, -250, 0);
 ArrayList<Planet> planets = new ArrayList<Planet>();
 
