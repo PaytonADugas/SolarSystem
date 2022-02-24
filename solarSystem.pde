@@ -3,6 +3,7 @@
 Planet sun = new Planet(100,0,0);
 Planet earth = new Planet(10, 400,0);
 Planet moon = new Planet(3, 500, 0);
+Planet mercury = new Planet(7, -250, 0);
 ArrayList<Planet> planets = new ArrayList<Planet>();
 
 void setup(){
@@ -13,24 +14,24 @@ void setup(){
   planets.add(sun);
   planets.add(earth);
   planets.add(moon);
-  sun.setOtherPlanets(planets);
-  earth.setOtherPlanets(planets);
-  moon.setOtherPlanets(planets);
-  moon.setVelocity(0, 1);
-  earth.setVelocity(0,3);
-  sun.setVelocity(0,-0.3);
+  planets.add(mercury);
+  
+  for(Planet planet : planets){
+    planet.setOtherPlanets(planets);
+  }
+    moon.setVelocity(0, 1);
+    earth.setVelocity(0,3);
+    mercury.setVelocity(0,-4);
+    sun.setVelocity(0, -0.1);
 }
 
 void draw(){
   translate(width/2, height/2);
   background(0);
-  sun.show();
-  sun.updateVelocity();
-  sun.updatePos();
-  earth.show();
-  earth.updateVelocity();
-  earth.updatePos();
-  moon.show();
-  moon.updateVelocity();
-  moon.updatePos();
+  
+  for(Planet planet : planets){
+    planet.show();
+    planet.updateVelocity();
+    planet.updatePos();
+  }
 }
