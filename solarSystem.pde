@@ -1,8 +1,8 @@
 
 
-Planet sun = new Planet(100,0,0);
-Planet earth = new Planet(10, 400,0);
-Planet moon = new Planet(3, 500, 0);
+Planet sun = new Planet(1000,0,0);
+Planet earth = new Planet(20, 700,0);
+Planet moon = new Planet(3, 800, 0);
 Planet mercury = new Planet(7, -250, 0);
 ArrayList<Planet> planets = new ArrayList<Planet>();
 
@@ -19,10 +19,10 @@ void setup(){
   for(Planet planet : planets){
     planet.setOtherPlanets(planets);
   }
-    moon.setVelocity(0, 1);
-    earth.setVelocity(0,3);
+    moon.setVelocity(0, 1.4);
+    earth.setVelocity(0,2.5);
     mercury.setVelocity(0,-4);
-    sun.setVelocity(0, -0.1);
+    sun.setVelocity(0, -0.01);
 }
 
 void draw(){

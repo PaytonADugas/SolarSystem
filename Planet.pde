@@ -4,7 +4,7 @@ class Planet{
    public PVector pos;
    public PVector velocity = new PVector(0,0);
    
-   private float G = 30;
+   private float G = 5;
    
    
    Planet(float mass, float x, float y){
@@ -43,6 +43,9 @@ class Planet{
    }
    
    void show(){
-     ellipse(pos.x,pos.y, mass*2, mass*2);
+     if(this.mass >=1000)
+       ellipse(pos.x,pos.y,200,200);
+     else
+       ellipse(pos.x,pos.y, mass, mass);
    }
 }
